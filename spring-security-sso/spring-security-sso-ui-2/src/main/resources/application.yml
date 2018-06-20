@@ -1,20 +1,15 @@
 server:
     port: 8083
-    context-path: /ui2
+    context-path: /ui
     session:
       cookie:
         name: UI2SESSION
 security:
   basic:
     enabled: false
-  oauth2:
-    client:
-      clientId: SampleClientId
-      clientSecret: secret
-      accessTokenUri: http://localhost:8081/auth/oauth/token
-      userAuthorizationUri: http://localhost:8081/auth/oauth/authorize
-    resource:
-      userInfoUri: http://localhost:8081/auth/user/me
+
 spring:
-  thymeleaf:
-    cache: false        
+  redis:
+    host: 119.28.23.209
+    port: 6379
+    password: redis1234
